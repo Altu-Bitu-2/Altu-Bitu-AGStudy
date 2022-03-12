@@ -14,5 +14,5 @@ for _ in range(n):
 # 정렬을 위해 딕셔너리를 튜플-리스트로 변경
 result = sorted(result.items())
 
-for i in range(len(result)):
-    print(result[i][0], result[i][1])
+for k in result:
+    print(k[0], k[1])

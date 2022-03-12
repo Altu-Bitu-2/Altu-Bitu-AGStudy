@@ -12,7 +12,7 @@ while True:
     except:
         break
 
-attend = set([])
+attend = set()
 result = 0
 
 for i in range(len(record)):

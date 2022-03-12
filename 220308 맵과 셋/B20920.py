@@ -1,9 +1,12 @@
+import sys
+
+input = sys.stdin.readline
 n, m = map(int, input().split())
 
 arr = dict()
 
 for _ in range(n):
-    word = input()
+    word = input().strip('\n')
 
     # 단어의 길이 체크
     if len(word) < m:
@@ -18,6 +21,6 @@ for _ in range(n):
 # 개수를 내림차순, 단어의 길이를 내림차순, 단어를 알파벳으로 정렬
 arr = sorted(arr.items(), key=lambda x: (-x[1], -len(x[0]), x[0]))
 
-for i in range(len(arr)):
-    print(arr[i][0])
+for k in arr:
+    print(k[0])
 

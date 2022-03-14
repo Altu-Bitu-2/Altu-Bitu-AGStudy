@@ -18,7 +18,7 @@ for _ in range(t):
     answer = 1
 
     # 종류 별로 옷을 입을 수 있는 경우의 수 확인
-    for key in result.keys():
-        answer *= int(result[key]) + 1
+    for value in result.values():
+        answer *= int(value) + 1
 
     print(answer - 1)

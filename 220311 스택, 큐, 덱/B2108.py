@@ -1,5 +1,6 @@
 import sys
 import math
+from collections import Counter
 
 
 def avg(num):
@@ -14,14 +15,7 @@ def mid(num):
 
 def mode(num):
 
-    mod = dict()
-
-    # dict로 빈도 체크
-    for n in num:
-        if n not in mod:
-            mod[n] = 1
-        else:
-            mod[n] += 1
+    mod = Counter(num)
 
     # 빈도 순, 숫자 오름차순으로 정렬
     mod = sorted(mod.items(), key=lambda x: (-x[1], x[0]))

@@ -16,7 +16,7 @@ value1 = 0
 value2 = 0
 answer = int(1e9)
 
-for i in range(1, k//2+1):
+for i in range(1, k+1):
     if k % i == 0:
         a = i
         b = k // i

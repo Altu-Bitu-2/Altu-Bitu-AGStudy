@@ -48,8 +48,9 @@ else:
     check = 0
 
     # 음수가 하나라도 있으면 유리수
-    for p in cal:
-        if p < 0:
+
+    for i in range(2, len(cal)):
+        if cal[i] < 0:
             check += 1
             break
 

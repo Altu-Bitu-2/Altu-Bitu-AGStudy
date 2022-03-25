@@ -22,6 +22,8 @@ for p in permutation:
         # 주어진 개수와 동일하다면 카운트
         if strike == int(arr[j][1]) and ball == int(arr[j][2]):
             count += 1
+        else:
+            break
     # 주어진 경우 모두 동일하다면 정답
     if count == n:
         answer += 1

@@ -1,7 +1,7 @@
-def calculator(end, a, b, carry):
-    temp = [0] * end
+def calculator(a, b, carry):
+    temp = [0] * len(a)
 
-    for i in range(end):
+    for i in range(len(b)):
         result = a[i] + b[i] + carry
         temp[i] = result % 10
         # carry를 합한 값이 10이 넘어가면 carry = 1
@@ -10,8 +10,20 @@ def calculator(end, a, b, carry):
         else:
             carry = 0
 
+    for i in range(len(b), len(a)):
+        result = a[i] + carry
+        temp[i] = result % 10
+        # carry를 합한 값이 10이 넘어가면 carry = 1
+        if result >= 10:
+            carry = 1
+        else:
+            carry = 0
+
+    if carry == 1:
+        temp += [1]
+
     # 남은 carry 값도 함께 return
-    return temp, carry
+    return temp
 
 
 def solution():
@@ -28,21 +40,12 @@ def solution():
     if len(b) > len(a):
         a, b = b, a
 
-    length = len(a) - len(b)
-
     # 짧은 영역 길이만큼 계산
-    result, carry = calculator(len(b), a[0:len(b)], b, 0)
-    # 남은 길이 영역의 덧셈 계산
-    result2, carry2 = calculator(length, a[len(b):], [0] * length, carry)
-    answer = result + result2
-
-    # 마지막에 carry 값이 나올 경우 올림수 추가
-    if carry2 == 1:
-        answer += [1]
+    result = calculator(a, b, 0)
 
     # 다시 역순으로 변경
-    answer.reverse()
+    result.reverse()
 
-    print(''.join(map(str, answer)))
+    print(''.join(map(str, result)))
 
 solution()

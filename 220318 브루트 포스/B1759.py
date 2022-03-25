@@ -11,16 +11,15 @@ cur_word = [''] * l
 
 def password(idx, con, vow, length):
 
-    if length > l or idx >= c:
+    if length == l and con >= 2 and vow >= 1:
+        print(''.join(cur_word))
         return
 
-    if length == l and con >= 2 and vow >= 1:
-        print(cur_word)
+    if length >= l or idx >= c:
         return
 
     cur_word[length] = dic[idx]
     length += 1
-
 
     if cur_word[length-1] in vowel:
         password(idx+1, con, vow+1, length)

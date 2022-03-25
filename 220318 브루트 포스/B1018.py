@@ -5,15 +5,15 @@ chess = []
 for _ in range(n):
     chess.append(input())
 
-W = ['WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW']
-B = ['BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB']
+w = ['WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW']
+b = ['BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB']
 
 
 def white_chess(x, y):
     count = 0
     for i in range(x, x+8):
         for j in range(y, y+8):
-            if chess[i][j] != W[i-x][j-y]:
+            if chess[i][j] != w[i-x][j-y]:
                 count += 1
     return count
 
@@ -22,7 +22,7 @@ def black_chess(x, y):
     count = 0
     for i in range(x, x+8):
         for j in range(y, y+8):
-            if chess[i][j] != B[i-x][j-y]:
+            if chess[i][j] != b[i-x][j-y]:
                 count += 1
     return count
 

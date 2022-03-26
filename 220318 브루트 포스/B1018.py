@@ -6,7 +6,6 @@ for _ in range(n):
     chess.append(input())
 
 w = ['WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW']
-b = ['BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB','BWBWBWBW','WBWBWBWB']
 
 
 def white_chess(x, y):
@@ -22,7 +21,7 @@ def black_chess(x, y):
     count = 0
     for i in range(x, x+8):
         for j in range(y, y+8):
-            if chess[i][j] != b[i-x][j-y]:
+            if chess[i][j] != w[7-i+x][7-j+y]:
                 count += 1
     return count
 

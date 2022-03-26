@@ -5,7 +5,7 @@ dic.sort()
 
 answer = []
 
-vowel = ['a', 'e', 'i', 'o', 'u']
+vowel = set("aeiou")
 cur_word = [''] * l
 
 

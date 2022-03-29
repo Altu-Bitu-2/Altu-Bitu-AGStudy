@@ -29,7 +29,4 @@ for _ in range(n):
         else:
             print(0)
     else:
-        if check[num]:
-            check[num] = False
-        else:
-            check[num] = True
+        check[num] = not check[num]

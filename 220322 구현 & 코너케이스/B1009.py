@@ -5,7 +5,7 @@ number[0].append(10)
 
 for _ in range(t):
     a, b = map(int, input().split())
-    # 일의 자리만 남김
+    # 일의 자리를 남김
     a %= 10
     k = a
 

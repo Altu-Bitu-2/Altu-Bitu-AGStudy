@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb87bd8f-770d-4894-8774-7910df63a081" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B11723.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B1316.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B19636.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B20923.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B1009.py" beforeDir="false" afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B1009.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B11723.py" beforeDir="false" afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B11723.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B1316.py" beforeDir="false" afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B1316.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B19636.py" beforeDir="false" afterPath="$PROJECT_DIR$/220322 구현 &amp; 코너케이스/B19636.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

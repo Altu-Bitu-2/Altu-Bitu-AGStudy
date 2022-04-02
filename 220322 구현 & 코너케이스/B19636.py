@@ -1,7 +1,7 @@
 w, l, t = map(int, input().split())
 d, l_d, a = map(int, input().split())
 
-# 초기 일일 기초 대사량
+# 일일 기초 대사량
 not_intake = l
 intake = l
 not_w = w

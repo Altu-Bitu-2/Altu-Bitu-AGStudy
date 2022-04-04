@@ -5,17 +5,16 @@ t = int(input())
 
 for _ in range(t):
     n = int(input())
-    a = list(map(int, input().split()))
+    arr = list(map(int, input().split()))
     m = int(input())
-
-    # 1원 5원 10원 50원 100원 500원
 
     d = [0 for _ in range(m+1)]
 
     d[0] = 1
 
-    for i in range(1, n+1):
-        for j in range(a[i], m):
-            d[j] += d[j-a[i]]
+    for a in arr:
+        # 코인 리스트의 값보다 큰 경우 경우의 수를 추가
+        for i in range(a, m+1):
+            d[i] += d[i-a]
 
     print(d[m])

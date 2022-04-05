@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 n = int(input())
 
-d = [0] * 10000
+d = [0] * n+1
 
 # n = 1일 때 칸을 채우는 경우의 수
 d[1] = 1

@@ -20,7 +20,13 @@ for _ in range(t):
         else:
             answer.append(a)
 
+<<<<<<< Updated upstream
     while temp:
         answer.append(temp.pop())
 
     print(''.join(answer))
+=======
+    temp.reverse()
+
+    print(''.join(answer) + ''.join(temp))
+>>>>>>> Stashed changes

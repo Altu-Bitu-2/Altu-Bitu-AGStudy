@@ -13,4 +13,4 @@ for i in range(n):
         k -= 1
     stack.append(num[i])
 
-print(''.join(map(str, stack[:n-k])))
+print(''.join(map(str, stack[:len(stack)-k])))

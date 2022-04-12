@@ -1,13 +1,11 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
-weight = list(map(int, input().split()))
 
-weight.sort()
+def solution(weight):
+    weight.sort()
+    max_value = weight[0]
 
-
-def solution(max_value):
     if max_value != 1:
         return 1
 
@@ -21,4 +19,6 @@ def solution(max_value):
     return max_value + 1
 
 
-print(solution(weight[0]))
+n = int(input())
+
+print(solution(list(map(int, input().split()))))

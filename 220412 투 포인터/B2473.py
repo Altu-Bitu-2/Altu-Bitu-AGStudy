@@ -14,14 +14,8 @@ for i in range(n):
     left = 0
     right = n-1
 
-    while left != right:
+    while left < i < right:
         # left, right가 i와 같으면 패스
-        if left == i:
-            left += 1
-            continue
-        if right == i:
-            right -= 1
-            continue
         sum_value = s[left] + s[right] + s[i]
         # 0에 가까운 값 찾기
         if abs(result) > abs(sum_value):

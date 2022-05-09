@@ -6,10 +6,12 @@ field = [list(map(int, input().split())) for _ in range(n)]
 
 time = 0
 answer = [int(1e9), -int(1e9)]
+
+low = min(map(min, field))
 height = max(map(max, field))
 
 # 현재 필드의 최대 높이 이상 쌓을 필요가 없음
-for cur in range(height+1):
+for cur in range(low, height+1):
     time = 0
     block = b
 
@@ -34,4 +36,4 @@ for cur in range(height+1):
     elif answer[0] == time:
         answer[1] = max(answer[1], cur)
 
-print(' '.join(map(str, answer)))
+print(*answer)

@@ -13,6 +13,10 @@ for _ in range(e):
     graph[a][b] = c
     graph[b][a] = c
 
+# 자신의 거리 0으로 초기화
+for i in range(n+1):
+    graph[i][i] = 0
+
 # 통과해야 하는 두 개의 정점
 s1, s2 = map(int, input().split())
 

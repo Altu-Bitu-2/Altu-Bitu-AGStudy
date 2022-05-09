@@ -27,8 +27,5 @@ for k in range(1, n+1):
                 vertex[i][j] = vertex[i][k]
 
 for i in range(1, n+1):
-    for j in range(1, n+1):
-        if i == j:
-            vertex[i][j] = '-'
-        print(vertex[i][j], end=' ')
-    print()
+    vertex[i][i] = '-'
+    print(*vertex[i][1:])

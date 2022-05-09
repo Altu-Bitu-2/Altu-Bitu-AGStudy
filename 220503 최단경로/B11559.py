@@ -44,8 +44,7 @@ def bfs(a, b, color):
     # 4개 이상 모이면 뿌요를 터뜨림
     if count >= 4:
         for b in bomb:
-            k, l = b[0], b[1]
-            field[k][l] = '.'
+            field[b[0]][b[1]] = '.'
 
     return count
 

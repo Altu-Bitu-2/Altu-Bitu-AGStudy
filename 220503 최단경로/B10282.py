@@ -39,8 +39,7 @@ for _ in range(t):
 
     # 정보를 담을 리스트
     graph = [[] for _ in range(n+1)]
-    visited = [False] * (n+1)
-    distance = [INF] * (n+1)
+    distance = [INF] * (n + 1)
 
     for _ in range(d):
         a, b, s = map(int, input().split())

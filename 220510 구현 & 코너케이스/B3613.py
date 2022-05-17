@@ -1,15 +1,11 @@
+# 반례 못 찾음
+
 import sys
 input = sys.stdin.readline
 
 # 공백 제거해서 입력
 string = input().rstrip()
-
-lang_type = True
 answer = ''
-
-# 언더바의 유무로 자바와 씨쁠을 구별
-if '_' not in string:
-    lang_type = False
 
 
 # 자바 변수의 예외 처리
@@ -30,21 +26,21 @@ def c_to_java():
     result = True
     # 언더바가 두개 있을 때
     if '__' in string:
-        result = False
+        return False
     # 언더바가 처음과 끝에 붙어 있을 때
     if string[0] == '_' or string[-1] == '_':
-        result = False
+        return False
     for s in string:
         # 대문자가 있을 때
         if s.isupper():
-            result = False
+            return False
         # 소문자도 언더바도 아닌 문자가 들어 있을 때
         if not s.islower() and s != '_':
-            result = False
-    return result
+            return False
+    return True
 
 
-if lang_type and c_to_java():
+if '_' in string and c_to_java():
     under_bar = False
     for s in string:
         if s == '_':
@@ -57,7 +53,7 @@ if lang_type and c_to_java():
             answer += s
     print(answer)
 
-elif not lang_type and java_to_c():
+elif '_' not in string and java_to_c():
     for s in string:
         # 대문자를 만나면 _ + 소문자로 변경
         if s.isupper():

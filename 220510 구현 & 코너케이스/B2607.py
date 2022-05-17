@@ -5,8 +5,8 @@ input = sys.stdin.readline
 # 같은 문자는 같은 개수만큼 있다.
 n = int(input())
 
-word = list(map(str, input().rstrip()))
-array = [list(map(str, input().rstrip())) for _ in range(n-1)]
+word = list(input().rstrip())
+array = [list(input().rstrip()) for _ in range(n-1)]
 
 word.sort()
 answer = 0

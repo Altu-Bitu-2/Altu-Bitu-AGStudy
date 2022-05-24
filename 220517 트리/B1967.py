@@ -11,6 +11,7 @@ distance = [0 for _ in range(n+1)]
 
 for _ in range(n-1):
     a, b, d = map(int, input().split())
+
     # 노드의 연결 정보 저장
     graph[a].append([b, d])
     graph[b].append([a, d])
@@ -35,7 +36,9 @@ long_distance(start, 0)
 
 # 아무 리프 노드에서 가장 거리가 먼 노드 => 그것과 가장 거리가 먼 노드가 트리의 지름
 vertex = distance.index(max(distance))
+
 distance = [0 for _ in range(n+1)]
+distance[vertex] = -1
 long_distance(vertex, 0)
 
 print(max(distance))

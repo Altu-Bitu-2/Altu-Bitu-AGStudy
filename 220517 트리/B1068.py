@@ -10,10 +10,6 @@ d = int(input())
 
 
 def find_parent(s, num, step):
-    # 한 계단 이상 올라와 발견된 노드 => 리프 노드가 아님
-    if step > 0:
-        leaf[num] = False
-
     # 최상단 노드가 루트이면 반환
     if node[num] == -1:
         return
@@ -35,7 +31,7 @@ count = 0
 
 # 리프 노드이며 삭제되지 않은 노드 카운트
 for idx in range(len(node)):
-    if leaf[idx] and node[idx] != -2:
+    if idx not in node and node[idx] != -2:
         count += 1
 
 print(count)

@@ -52,8 +52,8 @@ for party in parties:
     flag = True
     for i in range(len(party)):
         if find_parent(party[i]) in truth:
-            flag = False
-    if flag:
+            break
+    else:
         answer += 1
 
 print(answer)
